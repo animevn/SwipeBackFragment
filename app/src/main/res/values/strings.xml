@@ -3,4 +3,5 @@
     <string name="fragment_home">This is Home</string>
     <string name="bn_main">Open Fragment</string>
     <string name="tv_test">This is a Test</string>
+    <string name="home">This is Home Screen</string>
 </resources>

@@ -6,10 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.haanhgs.swipebackfragment.lib.SwipeBackFragment;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class FragmentTest extends BaseFragment {
+public class FragmentTest extends SwipeBackFragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

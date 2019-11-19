@@ -34,21 +34,46 @@ public class FragmentHome extends BaseFragment {
         }
     }
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        Button bnMain = view.findViewById(R.id.bnMain);
-        bnMain.setOnClickListener(new View.OnClickListener() {
+    protected void handleTextView() {
+        super.handleTextView();
+        super.tvMain.setText(R.string.home);
+    }
+
+    @Override
+    protected void handleButton() {
+        super.handleButton();
+        super.bnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFragmentTest();
             }
         });
-        return view;
     }
+
+//    @Nullable
+//    @Override
+//    public View onCreateView(@NonNull LayoutInflater inflater,
+//                             @Nullable ViewGroup container,
+//                             @Nullable Bundle savedInstanceState) {
+//        return super.onCreateView(inflater, container, savedInstanceState);
+//    }
+
+    //    @Nullable
+//    @Override
+//    public View onCreateView(@NonNull LayoutInflater inflater,
+//                             @Nullable ViewGroup container,
+//                             @Nullable Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_home, container, false);
+//        Button bnMain = view.findViewById(R.id.bnMain);
+//        bnMain.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openFragmentTest();
+//            }
+//        });
+//        return view;
+//    }
 
     @Override
     public void onResume() {
