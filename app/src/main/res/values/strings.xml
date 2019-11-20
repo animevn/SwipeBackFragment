@@ -4,4 +4,6 @@
     <string name="bn_main">Open Fragment</string>
     <string name="tv_test">This is a Test</string>
     <string name="home">This is Home Screen</string>
+    <string name="bnTest1">Open Test2</string>
+    <string name="tv_test2">This is test 2</string>
 </resources>

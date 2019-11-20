@@ -5,12 +5,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.haanhgs.swipebackfragment.lib.SwipeBackFragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentTest extends SwipeBackFragment {
 
@@ -20,6 +22,21 @@ public class FragmentTest extends SwipeBackFragment {
         Log.d("FragmentTest", "on Create");
     }
 
+    private void openFragmentTest(){
+        if (getFragmentManager() != null){
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            FragmentTest2 fragment = (FragmentTest2)getFragmentManager().findFragmentByTag("test2");
+            if (fragment == null){
+                FragmentTest2 fragmentTest = new FragmentTest2();
+                ft.add(R.id.flHome, fragmentTest, "test2");
+                ft.addToBackStack("test2");
+                ft.commit();
+            }else {
+                ft.attach(fragment);
+            }
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -27,6 +44,14 @@ public class FragmentTest extends SwipeBackFragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frament_test, container, false);
         TextView tvTest = view.findViewById(R.id.tvTest);
+        Button bnTest = view.findViewById(R.id.bnTest);
+        bnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFragmentTest();
+
+            }
+        });
         return attachToSwipeBack(view);
     }
 
