@@ -14,12 +14,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentTransaction;
 
-public class FragmentTest extends SwipeBackFragment {
+public class FragmentTest1 extends SwipeBackFragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("FragmentTest", "on Create");
+        Log.d("FragmentTest1", "on Create");
     }
 
     private void openFragmentTest(){
@@ -42,7 +42,7 @@ public class FragmentTest extends SwipeBackFragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frament_test, container, false);
+        View view = inflater.inflate(R.layout.frament_test1, container, false);
         TextView tvTest = view.findViewById(R.id.tvTest);
         Button bnTest = view.findViewById(R.id.bnTest);
         bnTest.setOnClickListener(new View.OnClickListener() {
@@ -58,18 +58,18 @@ public class FragmentTest extends SwipeBackFragment {
     @Override
     public void onResume() {
         super.onResume();
-        Log.d("FragmentTest", "on Resume");
+        Log.d("FragmentTest1", "on Resume");
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        Log.d("FragmentTest", "on DestroyView");
+        Log.d("FragmentTest1", "on DestroyView");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d("FragmentTest", "on Destroy");
+        Log.d("FragmentTest1", "on Destroy");
     }
 }

@@ -17,12 +17,12 @@ public class FragmentHome extends BaseFragment {
     private void openFragmentTest(){
         if (getFragmentManager() != null){
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-            FragmentTest fragment = (FragmentTest)getFragmentManager().findFragmentByTag("test");
+            FragmentTest1 fragment = (FragmentTest1)getFragmentManager().findFragmentByTag("test1");
             if (fragment == null){
-                FragmentTest fragmentTest = new FragmentTest();
-                ft.add(R.id.flHome, fragmentTest, "test");
+                FragmentTest1 fragmentTest = new FragmentTest1();
+                ft.add(R.id.flHome, fragmentTest, "test1");
                 ft.hide(FragmentHome.this);
-                ft.addToBackStack("test");
+                ft.addToBackStack("test1");
                 ft.commit();
             }else {
                 ft.attach(fragment);

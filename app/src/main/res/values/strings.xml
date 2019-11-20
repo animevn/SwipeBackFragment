@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">SwipeBackFragment</string>
     <string name="fragment_home">This is Home</string>
-    <string name="bn_main">Open Fragment</string>
-    <string name="tv_test">This is a Test</string>
+    <string name="bn_main">Open Test 1</string>
+    <string name="tv_test">This is Test 1</string>
     <string name="home">This is Home Screen</string>
-    <string name="bnTest1">Open Test2</string>
-    <string name="tv_test2">This is test 2</string>
+    <string name="bnTest1">Open Test 2</string>
+    <string name="tv_test2">This is Test 2</string>
+    <string name="tv_test3">This is Test 3</string>
+    <string name="bnTest2">Open Test 3</string>
 </resources>

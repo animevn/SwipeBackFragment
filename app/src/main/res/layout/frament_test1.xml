@@ -8,24 +8,24 @@
         android:id="@+id/tvTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tv_test2"
+        android:text="@string/tv_test"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#E65100"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bnTest2"
+        app:layout_constraintBottom_toTopOf="@+id/bnTest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bnTest2"
+        android:id="@+id/bnTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bnTest2"
+        android:layout_marginBottom="32dp"
+        android:text="@string/bnTest1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTest" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
