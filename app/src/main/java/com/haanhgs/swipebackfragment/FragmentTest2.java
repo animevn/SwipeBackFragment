@@ -23,9 +23,9 @@ public class FragmentTest2 extends SwipeBackFragment {
     private void openFragmentTest(){
         if (getFragmentManager() != null){
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-            FragmentTest3 fragment = (FragmentTest3)getFragmentManager().findFragmentByTag("test3");
+            FragmentTest1 fragment = (FragmentTest1)getFragmentManager().findFragmentByTag("test3");
             if (fragment == null){
-                FragmentTest3 fragmentTest = new FragmentTest3();
+                FragmentTest1 fragmentTest = new FragmentTest1();
                 ft.add(R.id.flHome, fragmentTest, "test3");
                 ft.addToBackStack("test3");
                 ft.commit();
