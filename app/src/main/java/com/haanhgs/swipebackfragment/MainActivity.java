@@ -6,8 +6,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String IS_HIDDEN = "IS_HIDDEN";
-
     private void openFragmentHome(){
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         FragmentHome fragment = (FragmentHome)getSupportFragmentManager().findFragmentByTag("main");
