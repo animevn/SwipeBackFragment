@@ -35,7 +35,7 @@ public class SwipeBackLayout extends FrameLayout {
     private SwipeBackFragment fragment;
     private Fragment preFragment;
     private Drawable shadow;
-    private Rect tempRect = new Rect();
+    private final Rect tempRect = new Rect();
     private boolean enable = true;
 
     private void initViewDragHelper() {
